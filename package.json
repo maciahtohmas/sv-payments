@@ -1,0 +1,9 @@
+{
+  "name": "samurai-vengeance-payments",
+  "version": "1.0.0",
+  "description": "Stripe webhook + payment API for Samurai Vengeance",
+  "dependencies": {
+    "stripe": "^14.0.0",
+    "firebase-admin": "^12.0.0"
+  }
+}
