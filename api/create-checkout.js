@@ -1,7 +1,8 @@
 / api/create-checkout.js
 // Handles Premium ($2.99), Season Pass ($1.99/mo), Starter Bundle ($0.99)
 
-const Stripe = require('stripe');
+import Stripe from 'stripe';
+
 
 const PRODUCTS = {
   premium: {
@@ -21,7 +22,8 @@ const PRODUCTS = {
   },
 };
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
+
   if (req.method === 'OPTIONS') { res.status(200).end(); return; }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
